@@ -1,19 +1,19 @@
 [nfs]
-172.31.23.119
+172.31.23.119 ansible_user="ec2-user"
 
 [webservers]
-172.31.23.98
-172.31.18.94
+172.31.23.98 ansible_user="ec2-user"
+172.31.18.94 ansible_user="ec2-user"
 
 [db]
-172.31.25.194
+172.31.25.194 ansible_user="ec2-user"
 
 [lb]
-172.31.17.134
+172.31.17.134 ansible_user="ubuntu"
 
-# [deployment:children]
-# db
-# lb
+[deployment:children]
+db
+lb
 
 # [deployment:vars]
 # ansible_user=ec2-user
